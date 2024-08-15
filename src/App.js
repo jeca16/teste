@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import HelloWord from './components/HelloWord'
 
 function App() {
+
+  const name = 'jessica'
+  const newname = name.toUpperCase()
+
+  function sum (a, b){
+    return a +b
+  }
+
+
+  const url = "https://m.media-amazon.com/images/I/81COEUtQKCL._SL1500_.jpg"
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1> teste</h1> 
+      <p>ola, {newname}</p>
+      <p> soma: {sum(1,2)}</p>
+      <img src= {url} alt="minha imagem"></img>
+      <HelloWord/>
     </div>
   );
 }
