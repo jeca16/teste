@@ -1,24 +1,27 @@
 import './App.css';
-import HelloWord from './components/HelloWord'
+import SayMyName from './components/SayMyName';
+import Pessoa from './components/Pessoa';
+import Frase from './components/Frase';
+import List from './components/List';
 
 function App() {
-
-  const name = 'jessica'
-  const newname = name.toUpperCase()
-
-  function sum (a, b){
-    return a +b
-  }
-
-
-  const url = "https://m.media-amazon.com/images/I/81COEUtQKCL._SL1500_.jpg"
+  const nome = 'maria '
   return (
     <div className="App">
-      <h1> teste</h1> 
-      <p>ola, {newname}</p>
-      <p> soma: {sum(1,2)}</p>
-      <img src= {url} alt="minha imagem"></img>
-      <HelloWord/>
+      <Frase/>
+      <Frase/>
+
+      <h1>teste</h1>
+      <SayMyName nome='matheus'/>
+      <SayMyName nome='joão'/>
+      <SayMyName nome = {nome}/>
+      <Pessoa 
+      nome="jess" 
+      idade = "17" 
+      profissao = "programadora" 
+      foto = "https://miro.medium.com/v2/resize:fit:1024/1*Hzes1SQwIwrxNr46jsBBlA.png"
+      />
+      <List/>
     </div>
   );
 }
