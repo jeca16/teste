@@ -11,8 +11,7 @@ function App() {
   return (
     <div className="App">
       <h1>teste</h1>
-      <Evento frase = 'to the stars who listen'/>
-      <Evento frase = 'and the dreams that are answered'/>
+      <Evento frase = 'to the stars who listen and the dreams that are answered'/>
       <Form/>
       
 
