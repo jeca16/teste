@@ -5,11 +5,16 @@ import Pessoa from './components/Pessoa';
 import Frase from './components/Frase';
 import List from './components/List';
 import Form from './components/Form';
+import Condicional from './components/Condicional';
 
 function App() {
   const nome = 'maria '
   return (
     <div className="App">
+      <h1>rederização condicional</h1>
+      <Condicional/>
+
+
       <h1>teste</h1>
       <Evento frase = 'to the stars who listen and the dreams that are answered'/>
       <Form/>
