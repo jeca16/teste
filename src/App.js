@@ -6,6 +6,7 @@ import Frase from './components/Frase';
 import List from './components/List';
 import Form from './components/Form';
 import OutraLista from './components/OutraLista';
+import Condicional from './components/Condicional';
 
 function App() {
   const nome = 'maria '
@@ -16,11 +17,12 @@ function App() {
     <div className="App">
       <h1>Renderização de listas</h1>
       <OutraLista itens = {meusItens}/>
+      <h1>rederização condicional</h1>
+      <Condicional/>
 
 
       <h1>teste</h1>
-      <Evento frase = 'to the stars who listen'/>
-      <Evento frase = 'and the dreams that are answered'/>
+      <Evento frase = 'to the stars who listen and the dreams that are answered'/>
       <Form/>
       
 
