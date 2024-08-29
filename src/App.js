@@ -17,6 +17,7 @@ function App() {
     <div className="App">
       <h1>Renderização de listas</h1>
       <OutraLista itens = {meusItens}/>
+      <OutraLista itens = {[]}/>
       <h1>rederização condicional</h1>
       <Condicional/>
 
