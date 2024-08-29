@@ -10,7 +10,12 @@ function cadastrarUsuario (e){
             <h1>meu cadastro: </h1>
             <form onSubmit={cadastrarUsuario}>
                 <div>
-                    <input type="text" placeholder="seu nome"></input>
+                    <label htmlFor="name"></label>
+                    <input type="text" id="name" placeholder="seu nome"></input>
+                </div>
+                <div>
+                    <label htmlFor="password"></label>
+                    <input type="password" placeholder="sua senha"></input>
                 </div>
                 <div>
                     <input type="submit" placeholder="cadastrar"></input>

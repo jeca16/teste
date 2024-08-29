@@ -5,11 +5,19 @@ import Pessoa from './components/Pessoa';
 import Frase from './components/Frase';
 import List from './components/List';
 import Form from './components/Form';
+import OutraLista from './components/OutraLista';
 
 function App() {
   const nome = 'maria '
+
+  const meusItens = ['corte de espinhos e rosas', 'corte de nevoa e furia', 'corte de asas e ruinas']
+
   return (
     <div className="App">
+      <h1>Renderização de listas</h1>
+      <OutraLista itens = {meusItens}/>
+
+
       <h1>teste</h1>
       <Evento frase = 'to the stars who listen'/>
       <Evento frase = 'and the dreams that are answered'/>
