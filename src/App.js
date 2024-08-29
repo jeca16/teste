@@ -1,57 +1,39 @@
 import './App.css';
-import Evento from './components/Evento';
-import SayMyName from './components/SayMyName';
-import Pessoa from './components/Pessoa';
-import Frase from './components/Frase';
-import List from './components/List';
-import Form from './components/Form';
-import OutraLista from './components/OutraLista';
-import Condicional from './components/Condicional';
-import { useState } from 'react';
-import SeuNome from './components/SeuNome'
-import Saudacao from'./components/Saudacao'
+import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Home from './pages/Home'
+import Empresa from './pages/Empresa'
+import Contato from './pages/Contato'
+
 
 function App() {
-  // const nome = 'maria '
 
-  const meusItens = ['corte de espinhos e rosas', 'corte de nevoa e furia', 'corte de asas e ruinas']
-
-  const [nome, setNome] = useState()
   return (
-    <div className="App">
-      <h1>State Lift</h1>
-      <SeuNome setNome = {setNome}/>
-      <Saudacao nome ={nome}/>
+   <Router>
+     <ul>
+       <li>
+          <Link to="/">Home</Link>
+        </li>
+       <li>
+          <Link to="/empresa">Empresa</Link>
+        </li>
+       <li>
+          <Link to="/contato">Contato</Link>
+        </li>
+     </ul>
+
+     <Routes>
+       <Route path = "/" element={<Home/>}></Route>
+
+       <Route path = "/empresa" element={<Empresa/>}></Route>
+
+       <Route path = "/contato" element={<Contato/>}>
+         
+       </Route>
+     </Routes>
 
 
-
-
-      <h1>Renderização de listas</h1>
-      <OutraLista itens = {meusItens}/>
-      <OutraLista itens = {[]}/>
-      <h1>rederização condicional</h1>
-      <Condicional/>
-
-
-      <h1>teste</h1>
-      <Evento frase = 'to the stars who listen and the dreams that are answered'/>
-      <Form/>
-      
-
-      <Frase/>
-      <Frase/>
-      <SayMyName nome='matheus'/>
-      <SayMyName nome='joão'/>
-      <SayMyName nome = {nome}/>
-      <Pessoa 
-      nome="jess" 
-      idade = "17" 
-      profissao = "programadora" 
-      foto = "https://miro.medium.com/v2/resize:fit:1024/1*Hzes1SQwIwrxNr46jsBBlA.png"
-      />
-      <List/>
-    </div>
-  );
+   </Router> 
+  )
 }
 
 export default App;
