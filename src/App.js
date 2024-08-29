@@ -7,14 +7,25 @@ import List from './components/List';
 import Form from './components/Form';
 import OutraLista from './components/OutraLista';
 import Condicional from './components/Condicional';
+import { useState } from 'react';
+import SeuNome from './components/SeuNome'
+import Saudacao from'./components/Saudacao'
 
 function App() {
-  const nome = 'maria '
+  // const nome = 'maria '
 
   const meusItens = ['corte de espinhos e rosas', 'corte de nevoa e furia', 'corte de asas e ruinas']
 
+  const [nome, setNome] = useState()
   return (
     <div className="App">
+      <h1>State Lift</h1>
+      <SeuNome setNome = {setNome}/>
+      <Saudacao nome ={nome}/>
+
+
+
+
       <h1>Renderização de listas</h1>
       <OutraLista itens = {meusItens}/>
       <OutraLista itens = {[]}/>
